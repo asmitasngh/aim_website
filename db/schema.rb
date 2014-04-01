@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140328093854) do
+ActiveRecord::Schema.define(version: 20140331165257) do
 
   create_table "registrations", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "email"
     t.string   "company_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
   end
 
 end

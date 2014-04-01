@@ -36,7 +36,7 @@ $(document).ready(function(){
 			  data: dataString,
 			  // cache: false,
 			  // alert(data);
-			  success: function(){
+			  success: function(data){
 			  	alert("hi");
  			     // $('.signup').html("<div id='message'></div>");
  			     $('.signup').html("<h2>Contact Form Submitted!</h2>");
@@ -48,11 +48,13 @@ $(document).ready(function(){
    				// }
 			  	
 			   },
-			   error: function(){
-			   	alert("error");
+			   error: function(xhr){
+			   	 alert(resp);
+			   	// var errors = $.parseJSON(xhr.responseText).errors;
+
 			   } 
 		});
-   			
+   			// return false;
 	});
      if(location.hash !="")
      {

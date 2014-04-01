@@ -28,11 +28,14 @@ class RegistrationsController < ApplicationController
   if @registration.save
     
         # Registration.new(params[:registration]).save
-        # format.html { redirect_to @registration, notice: 'Successfully Registered.' }
-        # format.json { render json: @registration, status: :created, location: @registration }
-        render json: @registration, status: :created, location: @registration
+         # format.html { redirect_to @registration, notice: 'Successfully Registered.' }
+         # format.json { render json: @registration, status: :created, location: @registration }
+         render json: @registration, status: :created, location: @registration
     else
+      # format.html { redirect_to @registration }
+      #    format.json { render json: @registration.errors.full_messages, status: :created, location: @registration }
       render json: @registration.errors, status: :unprocessable_entity
+      # render json: @registration.errors.full_messages, status: :unprocessable_entity
     end
   end
 

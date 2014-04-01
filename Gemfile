@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'protected_attributes'
 gem 'rails-api'
-
+# gem 'jquery-rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
